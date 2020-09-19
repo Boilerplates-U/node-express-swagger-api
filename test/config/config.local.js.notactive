@@ -1,0 +1,32 @@
+process.env.NODE_ENV = 'local';
+
+import { expect } from 'chai';
+import configFunction from '../../config';
+const configTest = configFunction();
+describe('[local] config', function() {
+
+    before(function() {
+        // 
+    });
+
+    it('[config.DOCS_ENABLED] should equal (boolean) true', function () {
+        expect(configTest.DOCS_ENABLED).to.be.true; 
+    });
+    it('[config.APP_ENV] should equal (string) "test"', function () {
+        expect(configTest.APP_ENV).to.equal('local'); 
+    });
+    it('[config.CLUSTER_MODE] should equal (boolean) false', function () {
+        expect(configTest.CLUSTER_MODE).to.be.false;
+    });
+    it('[config.APP_PORT] should equal (int) 3000', function () {
+        expect(configTest.APP_PORT).to.equal(3000);
+    });
+    it('[config.HOSTED_DOMAIN] should equal (string) "localhost', function () {
+        expect(configTest.HOSTED_DOMAIN).to.equal("localhost");
+    });
+
+    after(function() {
+        delete process.env.NODE_ENV;
+    });
+
+});

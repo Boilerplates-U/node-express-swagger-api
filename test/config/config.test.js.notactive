@@ -1,0 +1,32 @@
+process.env.NODE_ENV = 'test';
+
+import { expect } from 'chai';
+import configFunction from '../../config';
+const configTest = configFunction();
+describe('[test] config', function() {
+
+    before(function() {
+        // 
+    });
+
+    it('[config.DOCS_ENABLED] should equal (boolean) true', function () {
+        expect(configTest.DOCS_ENABLED).to.be.true; 
+    });
+    it('[config.APP_ENV] should equal (string) "test"', function () {
+        expect(configTest.APP_ENV).to.equal('test'); 
+    });
+    it('[config.CLUSTER_MODE] should equal (boolean) true', function () {
+        expect(configTest.CLUSTER_MODE).to.be.true;
+    });
+    it('[config.APP_PORT] should equal (int) 443', function () {
+        expect(configTest.APP_PORT).to.equal(443);
+    });
+    it('[config.HOSTED_DOMAIN] should equal (string) "node-express-api.test', function () {
+        expect(configTest.HOSTED_DOMAIN).to.equal("node-express-api.test");
+    });
+
+    after(function() {
+        delete process.env.NODE_ENV;
+    });
+
+});

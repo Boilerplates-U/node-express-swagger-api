@@ -1,0 +1,33 @@
+{
+  "name": "express-swagger-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r esm ./serve/start.js",
+    "start-dev": "nodemon -r esm ./serve/start.js",
+    "test": "mocha --recursive './test/**/*.js' --require esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Boilerplates-U/node-express-swagger-api.git"
+  },
+  "author": "gregory sobotka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Boilerplates-U/node-express-swagger-api/issues"
+  },
+  "homepage": "https://github.com/Boilerplates-U/node-express-swagger-api#readme",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "merge": "^1.2.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.1.3",
+    "nodemon": "^2.0.4"
+  }
+}
