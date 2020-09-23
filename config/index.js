@@ -14,7 +14,10 @@ let envConfig = require(`./${NODE_ENV}`).default;
 
 const baseConfig = {
     DOCS_ENABLED: true,
-    BUILD: process.env.BUILD_ID || 'na'
+    BUILD: process.env.BUILD_ID || 'na',
+    POSTGRES_USER: 'node_app',
+    POSTGRES_PASSWORD: '44Ro9BmY&z',
+    POSTGRES_HOST: 'localhost'
 };
 
 const config = merge(baseConfig, envConfig);
