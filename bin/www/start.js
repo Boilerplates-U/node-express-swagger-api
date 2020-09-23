@@ -4,8 +4,8 @@ import http from 'http';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
 import cluster from 'cluster';
-import app from '../app';
-import config from '../config';
+import app from '../../app';
+import config from '../../config';
 
 let workers = [];
 

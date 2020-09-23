@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node -r esm ./serve/start.js",
-    "start-dev": "nodemon -r esm ./serve/start.js",
+    "start": "node -r esm ./bin/www",
+    "start-dev": "nodemon -r esm ./bin/www",
     "test": "mocha --recursive './test/**/*.js' --require esm"
   },
   "repository": {
