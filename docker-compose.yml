@@ -1,0 +1,13 @@
+version: '3'
+services:
+    api:
+        build: .
+        ports:
+        - "8080:8080"
+        depends_on:
+            - redis
+            - postgres
+    redis:
+        image: "redis:alpine"
+    postgres:
+        image: "postgres:alpine"
