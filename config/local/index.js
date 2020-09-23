@@ -2,13 +2,13 @@
 // Local app config
 
 const domain = 'localhost';
-const port = 3000;
+const port = process.env.port || 8080;
 
 export default {
-    APP_PORT: port || 3000,
+    APP_PORT: port,
     CLUSTER_MODE: process.env.CLUSTER_MODE || false,
-    HOSTED_DOMAIN: process.env.hostedDomain || domain,
-    SSL_ENABLED: process.env.secureRequired || false,
+    HOSTED_DOMAIN: process.env.HOSTED_DOMAIN || domain,
+    SSL_ENABLED: process.env.SSL_ENABLED || false,
     DOCS_ENABLED: true,
     APP_ENV: 'local',
     FULL_APP_URL: `http://${domain}`

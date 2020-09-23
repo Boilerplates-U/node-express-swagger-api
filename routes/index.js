@@ -2,15 +2,20 @@
 
 import express from 'express';
 const router = express.Router()
+
 import config from '../config';
 
+router.get('/', (req, res) => {
+  res.send({ message: 'welcome' });
+})
+
 // define the home page route
-router.get('/build', function (req, res) {
+router.get('/build', (req, res) => {
   res.send(config.BUILD);
 })
 
 // simple active route
-router.get('/status', function (req, res) {
+router.get('/status', (req, res) => {
   res.send('active');
 })
 
@@ -18,7 +23,6 @@ router.get('/status', function (req, res) {
 router.get('/info', (req, res) => {
   res.send({
       APP_ENV: config.APP_ENV,
-      FULL_APP_URL: config.FULL_APP_URL,
       BUILD: config.BUILD
   });
 });
