@@ -13,7 +13,7 @@ services:
         image: "postgres:alpine"
         environment:
             POSTGRES_PASSWORD: 44Ro9BmY&z
-            POSTGRES_USER: node_app
+            POSTGRES_USER: node-app-user
             POSTGRES_DB: app-db
         ports:
             - "5432:5432"

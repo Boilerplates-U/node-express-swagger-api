@@ -4,12 +4,12 @@
 const domain = 'localhost';
 const port = process.env.port || 8080;
 
-export default {
+module.exports = {
     APP_PORT: port,
     CLUSTER_MODE: process.env.CLUSTER_MODE || false,
     HOSTED_DOMAIN: process.env.HOSTED_DOMAIN || domain,
     SSL_ENABLED: process.env.SSL_ENABLED || false,
     DOCS_ENABLED: true,
-    APP_ENV: 'local',
+    APP_ENV: 'development',
     FULL_APP_URL: `http://${domain}`
 };

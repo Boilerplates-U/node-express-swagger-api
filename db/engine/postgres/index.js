@@ -1,6 +1,8 @@
 import Sequelize from 'sequelize';
 import schemas from '../../schemas';
-console.log(schemas)
+import config from '../../../config';
+
+const dbConfig = config.db;
 
 const DB_NAME = 'app-db';
 const TABLE_NAME_VERSION_PREFIX = 'v1'; 
@@ -8,10 +10,10 @@ const TABLE_NAME_VERSION_PREFIX = 'v1';
 console.log('new Sequelize instance')
 const sequelize = new Sequelize(
     DB_NAME, // db name
-    'node_app', // username
-    '44Ro9BmY&z', // user password
+    dbConfig.username, // username
+    dbConfig.password, // user password
     {
-        host: 'localhost',
+        host: dbConfig.host,
         dialect: 'postgres'
     }
 );

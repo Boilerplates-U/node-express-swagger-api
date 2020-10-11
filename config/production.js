@@ -1,7 +1,7 @@
 // config/production/index
 // Production app config
 
-const domain = 'node-express-api.prod';
+const domain = 'node-express-api.production';
 const port = 443;
 
 export default {
