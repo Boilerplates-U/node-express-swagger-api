@@ -5,7 +5,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 
 const dbConfing = require('./postgres-db')[NODE_ENV];
 
-const envConfig = require(`./${NODE_ENV}`).default;
+const envConfig = require(`./${NODE_ENV}`);
 
 const baseConfig = {
     DOCS_ENABLED: true,

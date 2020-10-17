@@ -1,17 +1,8 @@
 import express from 'express';
 
-import postgres from './db/engine/postgres';
-
 import routes from './routes';
-// import config from './config';
 
 const app = express();
-
-// 
-postgres.verify();
-
-// 
-postgres.syncModels();
 
 // 
 app.use(routes);
