@@ -65,7 +65,7 @@ const setUpExpress = () => {
 
     // start server
     app.server.listen(config.APP_PORT, () => {
-        let url = `${config.FULL_APP_URL}:${app.server.address().port}`;
+        let url = `${config.FULL_APP_URL}:${config.port}`;
         console.log(`Started server on => ${url} for Process Id ${process.pid}`);
     });
 

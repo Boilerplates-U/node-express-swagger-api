@@ -4,10 +4,16 @@ services:
         build: .
         ports:
         - "8080:8080"
-        depends_on:
-            - redis
-            - postgres
+        # depends_on:
+        #     - redis
+        #     - postgres
     redis:
         image: "redis:alpine"
     postgres:
         image: "postgres:alpine"
+        environment:
+            POSTGRES_PASSWORD: 44Ro9BmY&z
+            POSTGRES_USER: node-app-user
+            POSTGRES_DB: app-db
+        ports:
+            - "5432:5432"
